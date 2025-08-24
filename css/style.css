@@ -1,0 +1,2361 @@
+@charset "utf-8";
+
+/* #F9F5F3 */
+
+
+/* #712828 */
+
+
+/* #fcf8f6 */
+
+body {
+    font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    background-color: #fff;
+    color: #413838;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.wrapper2 {
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.wrapper3 {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.wrapper4 {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+
+/* heddar */
+
+.top-logo {
+    width: 28%;
+    float: left;
+    text-align: center;
+}
+
+.top-logo p img {
+    width: 25%;
+    margin: 0 auto;
+}
+
+.top-logo .top-title {
+    font-size: 3.3rem;
+}
+
+.top-all {
+    padding-top: 70px;
+    font-size: 1.4rem;
+}
+
+.top-all span {
+    font-size: 1.6rem;
+}
+
+.top-all p img {
+    width: 85%;
+}
+
+.topic-day span {
+    font-size: 2.0rem;
+    font-family: "Averia Serif Libre", "FOT-筑紫ゴシック Pr5 D", cursive;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+}
+
+.topic-day {
+    color: #712828;
+}
+
+.topic-btn {
+    margin-top: 10px;
+}
+
+.topic-btn a {
+    color: #413838;
+    font-size: 1.4rem;
+    text-align: center;
+    display: inline;
+    padding: 5px 10px;
+    border-bottom: #989895 1px solid;
+}
+
+.topic-btn a:hover {
+    color: #A29061;
+    border-bottom: #A29061 1px solid;
+}
+
+.img-wrap {
+    position: relative;
+    margin-left: auto;
+}
+
+.img-wrap img {
+    width: 72%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.header-nav-btn {
+    position: absolute;
+    z-index: 100;
+    position: fixed;
+    right: 0;
+    /* top: 0; */
+}
+
+.header-reserve a {
+    background-color: #712828;
+    padding: 13px 18px;
+    color: #fff;
+    writing-mode: vertical-rl;
+}
+
+.header-reserve a:hover {
+    background-color: #9e3939;
+    transition: 0.4s;
+}
+
+.header-document a {
+    background-color: rgb(126, 114, 49);
+    padding: 13px 18px;
+    color: #fff;
+    writing-mode: vertical-rl;
+}
+
+.header-document a:hover {
+    background-color: #A29061;
+    transition: 0.4s;
+}
+
+.top-view {
+    margin-bottom: 100px;
+}
+
+.toTop {
+    cursor: pointer;
+    position: fixed;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    background: #fff;
+    color: #737373;
+    padding: 20px 30px;
+    border: solid 1px #737373;
+    box-shadow: 0 2px 10px -6px rgba(0, 0, 0, .5), 0 px 10px -4px rgba(0, 0, 0, .2);
+}
+
+.toTop::before {
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 5px;
+    bottom: 0;
+    left: 2px;
+    width: 13px;
+    height: 13px;
+    border-top: 3px solid #737373;
+    border-right: 3px solid #737373;
+    transform: rotate(-45deg);
+    left: 19px;
+}
+
+.fadein3 {
+    opacity: 0;
+    transform: translate(0, 100px);
+    transition: all 1s;
+}
+
+.fadein3.active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.fadein2 {
+    opacity: 0;
+    transform: translate(-50%, 0);
+    transition: all 1s;
+}
+
+.fadein2.active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.fadein1 {
+    opacity: 0;
+    transform: translate(50%, 0);
+    transition: all 1s;
+}
+
+.fadein1.active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+/* _______________________________________ */
+
+.header-nav-list {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.gnavi__list {
+    width: 12%;
+    padding: 20px 0;
+    position: relative;
+    transition: all .3s;
+}
+
+.gnavi__list:hover {
+    background-color: #fcf9f4;
+}
+
+.gnavi__list a {
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #000000;
+    font-size: 1.4rem;
+    letter-spacing: 0.05em;
+    transition: all .3s;
+}
+
+.gnavi__list a:hover {
+    color: #000000;
+}
+
+.dropdown__lists {
+    display: none;
+    /*デフォルトでは非表示の状態にしておく*/
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+}
+
+.gnavi__list:hover .dropdown__lists {
+    display: block;
+    /*Gナビメニューにホバーしたら表示*/
+}
+
+.dropdown__list {
+    background-color: #fcf9f4;
+    height: 60px;
+    transition: all .3s;
+    position: relative;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+}
+
+.dropdown__list:not(:first-child)::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #A29061;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.dropdown__list:hover {
+    background-color: #A29061;
+}
+
+.dropdown__list a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    text-decoration: none;
+    position: relative;
+}
+
+.dropdown__list a::before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    transform: rotate(135deg);
+    position: absolute;
+    right: 15px;
+    top: calc(50% - 5px);
+}
+
+
+/* ____________________________________________ */
+
+
+/* braidalfair */
+
+.braidalfair h2 {
+    font-size: 2.4rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: #A29061;
+    padding-top: 100px;
+}
+
+.braidalfair2 h2 {
+    font-size: 2.4rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: #A29061;
+    padding-top: 600px;
+}
+
+.braidalfair h2 span {
+    color: #413838;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+.braidalfair2 h2 span {
+    color: #413838;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+.braidalfair-box a {
+    border: 1px solid #989895;
+    display: flex;
+    position: relative;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.braidalfair-box a p img {
+    width: 100%;
+    padding: 5px;
+}
+
+.braidalfair-detail {
+    padding-left: 20px;
+}
+
+.braidalfair-date {
+    font-size: 2.0rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 10px;
+    background: #712828;
+    color: #ffffff;
+    margin-right: auto;
+}
+
+.braidalfair-date span {
+    font-size: 1.6rem;
+}
+
+.braidalfair-date:before {
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 0;
+    border: none;
+    border-bottom: solid 15px transparent;
+    border-right: solid 20px rgb(149, 158, 155);
+    /*折り返し部分*/
+}
+
+.braidalfair-detail .braidalfair-title {
+    color: #A29061;
+    font-weight: bold;
+    font-size: 2.0rem;
+}
+
+.braidalfair-addlogo {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.braidalfair-addlogo p {
+    font-size: 1.5rem;
+    background-color: #f3ecec;
+    padding: 3px 15px;
+}
+
+.braidalfair-detail-btn {
+    color: #413838;
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+.braidalfair-detail-btn:hover {
+    color: #A29061;
+}
+
+.braidalfair-detail-btn-top {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.braidalfair-detail-btn-all {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.braidalfair-detail-btn-all a {
+    color: #fff;
+    background-color: #A29061;
+    padding: 10px 20px;
+    border: 1px dotted #575757;
+    display: inline;
+    box-shadow: 0px 0px 0px 5px #A29061;
+    border: solid 1px #fff;
+}
+
+.braidalfair-detail-btn-all a:hover {
+    background-color: #712828;
+    box-shadow: 0px 0px 0px 5px #712828;
+    transition: 0.4s;
+}
+
+.braidalfair-btn {
+    margin-bottom: 100px;
+}
+
+
+/* concept */
+
+.concept {
+    text-align: center;
+    padding: 100px 0;
+    /* background-color: #fcf9f4; */
+}
+
+.concept h2 {
+    font-size: 2.4rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: #A29061;
+}
+
+.concept h2 span {
+    font-size: 2.4rem;
+    color: #413838;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+.concept-title {
+    font-size: 2.4rem;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+    margin-top: 20px;
+}
+
+.concept-img img {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.concept-comment {
+    font-size: 2.0rem;
+    line-height: 2.5;
+    letter-spacing: 0.1em;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+.concept-btn-all {
+    margin-top: 30px;
+}
+
+.concept-btn-all a {
+    color: #413838;
+    padding: 10px 50px;
+    border: 1px solid #413838;
+    display: inline;
+}
+
+.concept-btn-all a:hover {
+    background-color: #f3f2f2;
+    transition: 0.4s;
+}
+
+
+/* recommend */
+
+.recommend {
+    padding: 100px 0;
+    background-color: #fcf9f4;
+}
+
+.recommend h2 {
+    font-size: 2.4rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: #A29061;
+    padding-bottom: 20px;
+}
+
+.recommend h2 span {
+    color: #413838;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+.recommend-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.recommend-box-1 img {
+    width: 100%;
+}
+
+.recommend-box-1 {
+    width: calc(100% / 3);
+}
+
+.recommend-box-1 .recommend-title {
+    font-size: 2.0rem;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+.recommend-box-1 .recommend-comment {
+    font-size: 1.4rem;
+    letter-spacing: 0.2em;
+    padding-bottom: 20px;
+}
+
+.recommend-btn a {
+    font-size: 1.4rem;
+    color: #575757;
+    border-bottom: 1px solid #cbcbcb;
+    display: inline;
+}
+
+.recommend-btn a:hover {
+    color: #A29061;
+}
+
+
+/* ceremony */
+
+.bg-font {
+    font-size: 8.0rem;
+    color: #f5f5f5;
+    font-family: monospace;
+    position: absolute;
+    left: 0;
+    line-height: 1em;
+    letter-spacing: 10px;
+}
+
+.bg-font2 {
+    font-size: 7.0rem;
+    color: #f5f5f5;
+    font-family: monospace;
+    position: absolute;
+    left: 0;
+    line-height: 1em;
+    letter-spacing: 10px;
+}
+
+.ceremony_party {
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.ceremony_party h2 {
+    font-size: 2.4rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: #A29061;
+}
+
+.ceremony_party h2 span {
+    color: #413838;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+.ceremony-box {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+
+.ceremony-box .ceremony-img img {
+    width: 70%;
+    margin-left: auto;
+}
+
+.ceremony-img {
+    overflow: hidden;
+}
+
+.ceremony-detail {
+    width: 50%;
+    padding-top: 150px;
+}
+
+.ceremony-detail h3 {
+    color: #A29061;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+    font-size: 3.0rem;
+    position: relative;
+}
+
+.ceremony-detail h3 span {
+    color: #413838;
+    font-size: 2.4rem;
+}
+
+.ceremony-btn-all a {
+    color: #fff;
+    background-color: #A29061;
+    padding: 10px 50px;
+    display: inline;
+}
+
+.ceremony-btn-all a:hover {
+    background-color: rgb(126, 114, 49);
+    transition: 0.4s;
+}
+
+.ceremony-comment,
+.party-comment,
+.party-comment2,
+.cuisine-comment {
+    padding: 30px 0;
+    letter-spacing: 0.1em;
+}
+
+.party-box {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.party-box2 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding-top: 200px;
+}
+
+.party-detail {
+    width: 50%;
+    margin-left: auto;
+    padding-top: 150px;
+}
+
+.party-detail2 {
+    width: 50%;
+    margin-left: auto;
+}
+
+.party-detail h3 {
+    color: #A29061;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+    font-size: 3.0rem;
+    position: relative;
+}
+
+.party-detail2 h3 {
+    color: #A29061;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+    font-size: 3.0rem;
+    position: relative;
+}
+
+.party-box .party-img img {
+    width: 70%;
+}
+
+.party-box2 .party-img2 img {
+    width: 80%;
+}
+
+.party-detail h3 span {
+    font-size: 2.4rem;
+    color: #413838;
+}
+
+.party-detail2 h3 span {
+    font-size: 2.4rem;
+    color: #413838;
+}
+
+.party-btn-all a {
+    color: #fff;
+    background-color: #A29061;
+    padding: 10px 50px;
+    border: 1px solid #A29061;
+    display: inline;
+}
+
+.party-btn-all a:hover {
+    background-color: rgb(126, 114, 49);
+    transition: 0.4s;
+}
+
+.party-comment {
+    letter-spacing: 0.1em;
+}
+
+.cuisine-box {
+    display: flex;
+    padding-top: 250px;
+    justify-content: space-between;
+}
+
+.cuisine-box .cuisine-img img {
+    width: 100%;
+}
+
+.ceremony-img {
+    overflow: hidden;
+}
+
+.cuisine-detail {
+    width: 50%;
+    text-align: center;
+}
+
+.cuisine-detail h3 {
+    color: #A29061;
+    font-family: ser 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+    font-size: 3.0rem;
+    position: relative;
+}
+
+.cuisine-detail h3 span {
+    font-size: 2.4rem;
+    color: #413838;
+}
+
+.cuisine-btn-all a {
+    color: #fff;
+    background-color: #A29061;
+    padding: 10px 50px;
+    border: 1px solid #A29061;
+    display: inline;
+}
+
+.cuisine-btn-all a:hover {
+    background-color: rgb(126, 114, 49);
+    transition: 0.4s;
+}
+
+.cuisine-comment {
+    width: 100%;
+    padding: 30px;
+    letter-spacing: 0.1em;
+}
+
+
+/* photogarary*/
+
+.photogarary {
+    padding: 100px 0;
+}
+
+.photogarary h2 {
+    padding-bottom: 20px;
+    font-size: 2.4rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: #A29061;
+}
+
+.photogarary h2 span {
+    color: #413838;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+.photo-box,
+.photo-box2 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.photo-box a img {
+    width: 100%;
+}
+
+.photo-box .photo-title,
+.photo-box2 .photo-title {
+    text-align: center;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+    margin-bottom: 20px;
+}
+
+.photo-box .photo-title span,
+.photo-box2 .photo-title span {
+    color: #989895;
+    font-size: 1.4rem;
+}
+
+.photo-box2 a img {
+    width: 100%;
+}
+
+
+/* contact */
+
+.bg-rgba {
+    background-color: rgba(32, 8, 8, 0.7);
+    padding-bottom: 80px;
+    color: #ffffff;
+}
+
+.contact {
+    background-image: url(../image/contact-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.bg-rgba h2 span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.0rem;
+    letter-spacing: 6.0px;
+}
+
+.bg-rgba h2 {
+    margin: 0 0 50px 60px;
+    padding-top: 80px;
+    font-size: 1.4rem;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+.contact-reserve {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-txt {
+    font-size: 1.4rem;
+}
+
+.contact-txt span {
+    font-size: 3.0rem;
+    letter-spacing: 2px;
+    padding: 5px 10px;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+.contact-btn-all {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-btn-all p a {
+    font-size: 1.4rem;
+    color: #712828;
+    margin-left: 15px;
+    background-color: #ffffff;
+    border: #712828 1px solid;
+    padding: 10px;
+    text-align: center;
+}
+
+.contact-btn-all p a:hover {
+    background-color: #e4d5d5;
+    transition: 0.4s;
+}
+
+.contact-btn-all p img {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.border {
+    border-right: 1px solid #989895;
+    margin: 0 50px;
+}
+
+
+/* weddingplan */
+
+.weddingplan h2 {
+    font-size: 2.0rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: #A29061;
+    padding-bottom: 20px;
+}
+
+.weddingplan h2 span {
+    color: #413838;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+.weddingplan2 {
+    font-size: 2.0rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #A29061;
+}
+
+.weddingplan2 span {
+    font-size: 2.4rem;
+    color: #413838;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+.weddingplan-box {
+    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.weddingplan-all p img {
+    width: 100%;
+}
+
+.weddingplan-txt {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.weddingplan-all {
+    width: 100%;
+    border: #A29061 solid 1px;
+}
+
+.weddingplan-title {
+    font-size: 2.0rem;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+    font-weight: bold;
+    line-height: 4;
+}
+
+.weddingplan-comment {
+    font-size: 1.4rem;
+    letter-spacing: 0.2em;
+}
+
+.weddingplan-btn {
+    padding: 20px 0;
+}
+
+.weddingplan-btn a {
+    color: #575757;
+    border-bottom: 1px solid #cbcbcb;
+    display: inline;
+}
+
+.weddingplan-btn a:hover {
+    color: #A29061;
+}
+
+.wedding-btn-all {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.wedding-btn-all a {
+    color: #fff;
+    background-color: #A29061;
+    padding: 10px 50px;
+    border: 1px solid #A29061;
+    display: inline;
+}
+
+.wedding-btn-all a:hover {
+    background-color: rgb(126, 114, 49);
+    transition: 0.4s;
+}
+
+
+/* fair.html */
+
+.fair-dayselect {
+    display: flex;
+    padding: 100px 0 30px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.datebtn {
+    padding-right: 10px;
+}
+
+.select {
+    width: 30%;
+    padding: 10px 0;
+    border-radius: 10px;
+}
+
+.select-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.select-btn p a {
+    color: #ffffff;
+    background-color: #A29061;
+    padding: 10px 40px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+.select-btn p a:hover {
+    background-color: rgb(126, 114, 49);
+    transition: 0.4s;
+}
+
+.fair-comment {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.fair-comment span {
+    color: #A29061;
+    font-size: 3.0rem;
+    letter-spacing: 0.3rem;
+}
+
+.diary-box {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.diary-all {
+    background-color: #e8dadac3;
+    width: 25%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.diary-all .diary {
+    color: #712828;
+    letter-spacing: 1.0px;
+    font-weight: 500;
+}
+
+.diary-all .number {
+    color: #575757;
+    padding-top: 230px;
+}
+
+.diary span {
+    font-size: 4.0rem;
+    font-weight: 500;
+}
+
+.plan-box {
+    width: 100%;
+    padding: 30px 20px;
+    box-shadow: 2px 2px 4px rgb(215, 215, 215);
+}
+
+.plan-top {
+    font-size: 1.4rem;
+    background-color: #712828;
+    padding: 2px 5px;
+    color: #fff;
+    font-weight: bold;
+    display: inline;
+}
+
+.plan-all {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.plan-title {
+    font-size: 2.0rem;
+    color: #A29061;
+    font-weight: bold;
+}
+
+.plandetail-all {
+    display: flex;
+}
+
+.flex-item {
+    flex: 1;
+}
+
+.plandetail-all p img {
+    width: 100%;
+}
+
+.plandetail-time {
+    padding: 30px;
+    align-items: center;
+    display: flex;
+    border-bottom: 1px solid #e4e1e1;
+    border-top: 1px solid #e4e1e1;
+}
+
+.plandetail-time p {
+    font-weight: bold;
+    padding-right: 30px;
+    -top: 5px;
+}
+
+.plandetail-time ul {
+    /* margin-left: 30px; */
+    line-height: 2.0;
+    padding-right: 20px;
+}
+
+.plandetail {
+    font-size: 1.4rem;
+    margin-top: 30px;
+}
+
+.plandetail-logo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 30px;
+}
+
+.plandetail-logo p {
+    font-size: 1.3rem;
+    background-color: #f3ecec;
+    padding: 3px 15px;
+}
+
+.plandetail-add {
+    padding: 30px;
+}
+
+.plandetail-btn {
+    text-align: right;
+    padding: 30px;
+}
+
+.plandetail-btn a {
+    color: #ffffff;
+    background-color: #712828;
+    display: inline;
+    padding: 10px 50px;
+}
+
+.pics {
+    background-color: #e8dadac3;
+}
+
+.logo-1 {
+    width: 10%;
+}
+
+.logo {
+    width: 30px;
+}
+
+.other {
+    display: flex;
+    align-items: center;
+    margin-right: 200px;
+}
+
+.logoname1 {
+    padding-left: 10px;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+    font-size: 2.0rem;
+}
+
+.plan_html {
+    background-color: #F4F3F0;
+    padding: 50px 0 50px 0;
+}
+
+.plan-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.plan-flex p a {
+    font-size: 1.4rem;
+    padding: 10px 30px;
+    margin-left: 10px;
+    background-color: #ffffff;
+}
+
+.plan-flex p a:hover {
+    background-color: #dcd9cf;
+    transition: 0.4s;
+}
+
+.plan-detail {
+    display: flex;
+    background-color: #ffffff;
+    margin-top: 50px;
+    box-shadow: 2px 2px 4px rgb(215, 215, 215);
+    align-items: center;
+}
+
+.plan-detail p img {
+    width: 100%;
+}
+
+.plan-content {
+    padding-left: 30px;
+}
+
+.plan-content h4 {
+    color: #A29061;
+    font-size: 2.0rem;
+    font-weight: bold;
+}
+
+.plan-content .best {
+    display: flex;
+    gap: 10px;
+}
+
+.plan-content .best p {
+    font-size: 1.4rem;
+    background-color: #eae3d0;
+    padding: 0 10px;
+}
+
+.plan-since {
+    font-size: 1.4rem;
+}
+
+.plan-btn a {
+    font-size: 1.2rem;
+}
+
+.plan-price {
+    font-size: 2.0rem;
+    color: #712828;
+    font-weight: 500;
+    padding: 20px 0;
+}
+
+.plan-since {
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.plan-btn {
+    margin-bottom: 30px;
+}
+
+.plan-btn a {
+    color: #575757;
+    border-bottom: 1px solid #cbcbcb;
+    display: inline;
+}
+
+.plan-btn a:hover {
+    color: #A29061;
+}
+
+.logo,
+.logoname {
+    display: none;
+}
+
+.drawer_hidden {
+    display: none;
+}
+
+.flexfooter__navi {
+    display: flex;
+}
+
+hr {
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #35363b;
+}
+
+.f-logo a p img {
+    width: 20%;
+}
+
+.f-logo {
+    display: flex;
+    align-items: center;
+}
+
+.f-logo a p {
+    font-size: 2.0rem;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+.footer__navi {
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.footer__navi li {
+    display: inline-block;
+    font-size: 1.4rem;
+}
+
+.footer__navi li:not(:last-child) {
+    margin-right: 15px;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.md-flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+address {
+    font-size: 1.6rem;
+    padding-left: 20px;
+}
+
+
+/* _________concept__________ */
+
+.cnp-txt {
+    line-height: 2.0;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+.cnp-first .cnp-title {
+    padding: 10px 0;
+    font-size: 2.4rem;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cnp-first h2 {
+    padding-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #A29061;
+}
+
+.flex p img {
+    width: 100%;
+}
+
+.first-viewimg {
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.txt1 {
+    padding: 100px 0;
+    text-align: center;
+    color: #A29061;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.txt1 span {
+    color: #413838;
+    font-size: 3.0rem;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+.select h2 {
+    font-size: 2.4rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 150px 0 30px 0;
+    color: #A29061;
+}
+
+.book {
+    padding: 10px 0 20px 0;
+}
+
+.digital {
+    border: #989895 1px solid;
+    padding: 20px 20px;
+}
+
+.digital-btn a {
+    color: #413838;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 5px 10px;
+    border: #989895 1px solid;
+}
+
+.digital-btn a:hover {
+    background-color: #d2d2d2;
+}
+
+.digital h4 {
+    font-size: 2.4rem;
+    text-align: center;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+.digital-flex {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.digital-flex p img {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.rr {
+    margin-top: 200px;
+}
+
+
+/* お問い合わせフォーム */
+
+.form-bg {
+    background: #e4eeef;
+    padding: 100px 0 200px 0;
+}
+
+.form-bg h2 {
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.form-bg h2 span {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 3.0rem;
+}
+
+.form-message {
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 50px;
+}
+
+.message2 {
+    color: #8c0007;
+    font-size: 1.4rem;
+}
+
+.red {
+    background: #8c0007;
+    color: #ffffff;
+    font-size: 1.4rem;
+    line-height: 10px;
+    padding: 0 10px;
+}
+
+.form-contact {
+    background: #ffffff;
+    padding: 100px;
+}
+
+.contact-table {
+    width: 100%;
+}
+
+.table-list {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Noto Sans JP', sans-serif;
+    letter-spacing: 0.05em;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.table-list th {
+    font-size: 13px;
+    font-weight: bold;
+    width: 250px;
+    text-align: left;
+}
+
+.table-list-address {
+    flex-wrap: wrap;
+}
+
+.table-list-address .input-area {
+    margin-bottom: 10px;
+}
+
+.input-area {
+    font-family: 'Noto Sans JP', sans-serif;
+    letter-spacing: 0.05em;
+    padding: 0 10px;
+    border: none;
+    width: 550px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid #c4c4c4;
+}
+
+.table-list td {
+    font-size: 13px;
+    width: calc(100% - 250px);
+}
+
+input::placeholder {
+    color: #bfbfbf;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+textarea {
+    border: none;
+    width: 550px;
+    height: 200px;
+    padding: 0;
+    border: 1px solid #c4c4c4;
+    resize: vertical;
+    /* 横方向のみサイズを固定する */
+}
+
+textarea::placeholder {
+    color: #bfbfbf;
+    font-size: 12px;
+}
+
+input[type="text"] {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-contact .text {
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.form-contact .text a {
+    color: #000;
+    border-bottom: 1px solid #000;
+    transition: all .3s;
+    text-decoration: none;
+}
+
+.form-contact .text a:hover {
+    border-bottom: 1px solid #777;
+    padding-bottom: 5px;
+    color: #777;
+}
+
+.submit-button {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    margin: 30px auto 0;
+    background-color: #e4eeef;
+    cursor: pointer;
+    border: 1px solid #e4eeef;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1.5;
+    outline: none;
+    -webkit-transition: all .3s;
+    transition: all .5s;
+    padding: 20px 100px;
+}
+
+.submit-button:hover {
+    background: #cae1e3;
+    color: #000;
+    border: 1px solid #cae1e3;
+}
+
+
+/* アクセス */
+
+.access-bg {
+    background-color: #f3ecec;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.access-bg h2 {
+    font-size: 2.4rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: #A29061;
+}
+
+.access-bg h2 span {
+    color: #413838;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+.access-cmt {
+    padding: 50px 0;
+    font-weight: bold;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+.access-pc img {
+    width: 100%;
+}
+
+.access-pc {
+    margin: 0 auto;
+}
+
+.map {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 75%;
+    /* 比率を4:3に固定 */
+}
+
+
+/* Google Mapのiframe */
+
+.map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 50px;
+}
+
+
+/* 披露宴会場 */
+
+.party-all {
+    background-color: #f9f9f9;
+}
+
+.party-comment {
+    text-align: center;
+}
+
+.party-comment h3 {
+    font-size: 3.0rem;
+    padding: 20px 0;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+.party-flex {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.party {
+    background-color: #f3ecec;
+    padding: 100px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.party h3 {
+    padding: 20px 0;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+
+/* チャペル */
+
+.chapel-flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0;
+    gap: 30px;
+}
+
+.chapel-flex2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0;
+    gap: 30px;
+}
+
+.chapel-flex .cmt,
+.chapel-flex2 .cmt {
+    width: 50%;
+    padding-top: 100px;
+    text-align: justify;
+    padding-bottom: 30px;
+}
+
+.chapel-flex .cmt span,
+.chapel-flex2 .cmt span {
+    font-size: 2.4rem;
+    font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+.chapel-flex .blue,
+.chapel-flex2 .blue {
+    width: 70%;
+}
+
+.chapel-width {
+    width: 70%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.bet {
+    font-size: 1.6rem;
+}
+
+.cusine-flex img {
+    width: 100%;
+}
+
+.cusine-left {
+    margin-left: auto;
+    width: 50%;
+}
+
+.chef-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 100px 0;
+}
+
+.chef-flex p img {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.chef-content h3 {
+    padding: 30px 0 20px 0;
+}
+
+.chefname {
+    color: #7d7d7d;
+    font-size: 1.8rem;
+}
+
+.chef-comment {
+    padding-top: 20px;
+}
+
+.cusine-content-flex {
+    display: flex;
+}
+
+.cusine-detail p {
+    padding: 70px 0;
+    width: 90%;
+}
+
+.pic-left {
+    width: 50%;
+    padding: 50px 0;
+}
+
+.cusine-flex {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.cusine-text {
+    width: 40%;
+}
+
+.cusine-text h3 {
+    font-size: 5.0rem;
+    color: rgb(181, 181, 181);
+}
+
+.cusine-text h4 {
+    padding: 20px 0;
+}
+
+.some {
+    font-size: 1.6rem;
+}
+
+.cake-flex {
+    display: flex;
+    padding: 20px;
+    width: 70%;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.cake-text {
+    text-align: center;
+    padding: 50px 0;
+}
+
+@media screen and (max-width:1024px) {
+    .top-all {
+        padding-top: 40px;
+    }
+    .top-view {
+        margin-bottom: 0px;
+    }
+    .top-logo {
+        display: none;
+    }
+    .img-wrap img {
+        width: 100%;
+    }
+    .concept-img img {
+        width: 40%;
+    }
+    .braidalfair h2,
+    .concept h2,
+    .recommend h2,
+    .ceremony_party h2,
+    .photogarary h2,
+    .bg-rgba h2,
+    .weddingplan h2,
+    .cnp-first h2,
+    .select h2 {
+        font-size: 1.8rem;
+    }
+    .braidalfair2 h2,
+    .concept2 h2,
+    .recommend2 h2,
+    .ceremony_party2 h2,
+    .photogarary2 h2,
+    .bg-rgba2 h2,
+    .weddingplan2 h2,
+    .cnp-first2 h2,
+    .select2 h2 {
+        font-size: 1.8rem;
+    }
+    /* ここから下がハンバーガーメニューに関するCSS */
+    /* チェックボックスを非表示にする */
+    .drawer_hidden {
+        display: none;
+    }
+    /* ハンバーガーアイコンの設置スペース */
+    .drawer_open {
+        display: flex;
+        height: 60px;
+        width: 60px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 100;
+        /* 重なり順を一番上にする */
+        cursor: pointer;
+    }
+    /* ハンバーガーメニューのアイコン */
+    .drawer_open span,
+    .drawer_open span:before,
+    .drawer_open span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background: #333;
+        transition: 0.5s;
+        position: absolute;
+    }
+    /* 三本線の一番上の棒の位置調整 */
+    .drawer_open span:before {
+        bottom: 8px;
+    }
+    /* 三本線の一番下の棒の位置調整 */
+    .drawer_open span:after {
+        top: 8px;
+    }
+    /* アイコンがクリックされたら真ん中の線を透明にする */
+    #drawer_input:checked~.drawer_open span {
+        background: rgba(255, 255, 255, 0);
+    }
+    /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+    #drawer_input:checked~.drawer_open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    #drawer_input:checked~.drawer_open span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+    /* メニューのデザイン*/
+    .nav_content {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        /* メニューを画面の外に飛ばす */
+        z-index: 99;
+        background: #A29061;
+        transition: 0.5s;
+    }
+    /* アイコンがクリックされたらメニューを表示 */
+    #drawer_input:checked~.nav_content {
+        left: 0;
+        /* メニューを画面に入れる */
+    }
+    .header-nav-list {
+        display: block;
+        margin-top: 100px;
+        margin-right: 100px;
+    }
+    .header-nav-list li {
+        display: block;
+        padding: 10px 0;
+    }
+    .header-nav-list li a {
+        font-size: 2.0rem;
+        font-weight: 400;
+        color: #ffffff;
+    }
+    .header-nav-list li a:hover {
+        border-bottom: 1px solid #ffffff;
+        color: #cbcbcb;
+        transition: 0.5s;
+    }
+    .header-nav-list li:hover {
+        background-color: #A29061;
+    }
+    .gnavi__list {
+        width: 100%;
+    }
+    .dropdown__list a {
+        display: none;
+    }
+    .dropdown__list {
+        background-color: transparent;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+    }
+    .logo {
+        display: block;
+    }
+    .logoname {
+        display: block;
+        font-family: 游明朝体, 'Yu Mincho', YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+    }
+    .braidalfair-box a {
+        display: block;
+    }
+    .recommend-box {
+        padding: 0 20px;
+    }
+    .ceremony-box,
+    .party-box,
+    .cuisine-box,
+    .cuisine-box,
+    .party-box2 {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .party-box2 h2 {
+        padding-top: 650px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .concept-comment {
+        line-height: 1.5;
+    }
+    .braidalfair h2 span,
+    .concept h2 span,
+    .recommend h2 span,
+    .ceremony_party h2 span,
+    .photogarary h2 span,
+    .bg-rgba h2 span,
+    .weddingplan h2 span,
+    .cnp-first h2 span,
+    .select h2 span {}
+    .braidalfair-detail {
+        padding-left: 0px;
+        padding-top: 10px;
+    }
+    .ceremony-detail h3,
+    .party-detail h3,
+    .cuisine-detail h3,
+    .party-detail2 h3 {}
+    .ceremony-detail h3 span,
+    .party-detail h3 span,
+    .cuisine-detail h3 span,
+    .party-detail2 h3 span {}
+    .ceremony-detail,
+    .party-detail {
+        width: 70%;
+        padding-top: 50px;
+    }
+    .cuisine-detail,
+    .party-detail2 {
+        width: 70%;
+    }
+    .ceremony-comment,
+    .party-comment,
+    .party-comment2,
+    .cuisine-comment {}
+    .ceremony-btn-all a,
+    .cuisine-btn-all a,
+    .party-btn-all a,
+    .concept-btn-all a,
+    .wedding-btn-all a {
+        padding: 7px 30px;
+    }
+    .weddingplan-title {}
+    .weddingplan-comment {}
+    .weddingplan-btn a {}
+    .photo-box .photo-title span,
+    .photo-box2 .photo-title span,
+    .photo-box .photo-title,
+    .photo-box2 .photo-title {}
+    .bg-rgba h2 span {}
+    .braidalfair-detail .braidalfair-title {}
+    .braidalfair-addlogo p {
+        padding: 2px 15px;
+        font-size: 1.2rem;
+    }
+    .braidalfair-detail-btn {
+        font-size: 1.4rem;
+    }
+    .braidalfair-date {
+        padding: 3px 10px;
+        font-size: 1.4rem;
+    }
+    .concept-title {}
+    .ceremony_party,
+    .recommend-box {
+        max-width: 700px;
+    }
+    .recommend-box-1 .recommend-title {}
+    .recommend-box-1 .recommend-comment {
+        letter-spacing: 0.1rem;
+    }
+    .recommend-btn a {}
+    .weddingplan {
+        max-width: 700px;
+    }
+    /* plan */
+    .weddingplan2 {}
+    .weddingplan2 span {}
+    .plan-flex p a {
+        padding: 5px 10px;
+    }
+    .plan-content h4 {
+        padding-top: 60px;
+    }
+    .plan-btn a {}
+    /* チャペル */
+    .chapel-flex .blue,
+    .chapel-flex2 .blue {
+        width: 100%;
+    }
+    .chapel-flex .cmt,
+    .chapel-flex2 .cmt {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 30px 0;
+    }
+    .chapel-flex {
+        display: block;
+    }
+    .chapel-flex2 {
+        flex-direction: column-reverse;
+    }
+    .chapel-flex .cmt span,
+    .chapel-flex2 .cmt span {}
+    .header-nav-btn {
+        display: none;
+    }
+    .cusine-flex img {
+        width: 60%;
+        margin: 0 auto;
+    }
+    .cusine-text {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .cusine-flex {
+        display: block;
+        padding: 0px 0;
+    }
+    .photogarary {
+        padding: 50px 0;
+    }
+    .chef-flex {
+        display: block;
+        padding: 50px 0 0 0;
+    }
+    .chef-content {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .top-view {
+        margin-bottom: 0px;
+    }
+    .plan-detail {
+        max-width: 700px;
+    }
+    .access-bg {
+        padding: 50px 0;
+    }
+    @media screen and (max-width:390px) {
+        .access-cmt {
+            padding: 20px 0;
+        }
+        .ceremony-box .ceremony-img img {
+            width: 100%;
+            padding: 20px;
+        }
+        .party-box2 .party-img2 img {
+            width: 100%;
+            padding: 20px;
+        }
+        .digital h4 {}
+        .book {}
+        .digital-btn a {
+            padding: 2px 10px;
+            display: inline;
+        }
+        .first-viewimg {
+            padding-bottom: 50px;
+        }
+        .concept-comment {
+            line-height: 1.5;
+            width: 80%;
+            margin: 0 auto;
+        }
+        .braidalfair2 h2 {
+            padding-top: 300px;
+        }
+        address {
+            text-align: center;
+            padding-left: 0;
+        }
+        .bg-rgba h2 {
+            margin: 0;
+            text-align: center;
+        }
+        .braidalfair h2,
+        .concept h2,
+        .recommend h2,
+        .ceremony_party h2,
+        .photogarary h2,
+        .bg-rgba h2,
+        .weddingplan h2,
+        .cnp-first h2,
+        .select h2,
+        .access-bg h2 {}
+        .ceremony-detail h3,
+        .party-detail h3,
+        .cuisine-detail h3,
+        .party-detail2 h3 {}
+        .ceremony-detail h3 span,
+        .party-detail h3 span,
+        .cuisine-detail h3 span,
+        .party-detail2 h3 span {}
+        .ceremony-detail {
+            width: 100%;
+            padding: 20px;
+        }
+        .party-detail {
+            width: 100%;
+            padding: 20px;
+        }
+        .cuisine-detail {
+            width: 100%;
+            padding: 20px;
+        }
+        .party-detail2 {
+            width: 100%;
+            padding: 20px;
+        }
+        .ceremony-comment,
+        .party-comment,
+        .party-comment2,
+        .cuisine-comment {
+            padding: 20px 0;
+        }
+        .braidalfair-box a p img .ceremony-box .ceremony-img img,
+        .party-box .party-img img,
+        .cuisine-box .cuisine-img img {
+            width: 100%;
+            padding: 20px;
+        }
+        .ceremony-box,
+        .party-box,
+        .cuisine-box,
+        .party-box2 {
+            display: block;
+            padding-top: 0px;
+        }
+        .concept-title {}
+        .recommend-box-1 {
+            width: 100%;
+            padding: 20px;
+        }
+        .recommend-box {
+            display: block;
+        }
+        .recommend-box-1 .recommend-title {
+            padding: 10px 0;
+        }
+        .weddingplan-box {
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+        }
+        .weddingplan-all {
+            margin-bottom: 20px;
+        }
+        .wedding-btn-all {
+            padding-top: 0;
+        }
+        .contact-reserve {
+            display: block;
+        }
+        .contact-txt {
+            text-align: center;
+            padding-bottom: 50px;
+        }
+        .md-flex {
+            display: block;
+            padding: 0;
+            text-align: center;
+        }
+        .f-logo a p {}
+        .bg-rgba h2 span {}
+        .contact-txt span {}
+        .contact-txt {}
+        .contact-btn-all p img {
+            width: 50%;
+        }
+        .contact-btn-all p a {
+            padding: 5px;
+        }
+        /* plan */
+        .weddingplan2 {}
+        .weddingplan2 span {}
+        .plan-flex p a {
+            margin-bottom: 10px;
+        }
+        .plan-flex {
+            flex-wrap: wrap;
+        }
+        .plan-detail {
+            display: block;
+            padding: 20px 0;
+        }
+        .plan-detail p img {
+            width: 70%;
+            margin: 0 auto;
+        }
+        .plan-content h4 {
+            padding-top: 20px;
+        }
+        .plan-content {
+            padding-left: 0px;
+            text-align: center;
+        }
+        .plan-content .best p {}
+        .plan-content .best {
+            justify-content: center;
+        }
+        /* fair.html */
+        .select-btn p a {
+            padding: 5px 10px;
+        }
+        .fair-comment span {}
+        .fair-comment {}
+        .diary-box {
+            display: block;
+        }
+        .diary-all {
+            width: 100%;
+        }
+        .diary-all .diary {}
+        .diary span {}
+        .diary-all .number {
+            display: none;
+        }
+        .plan-top {}
+        .plan-title {}
+        .plandetail-all {
+            display: block;
+        }
+        .plandetail-time {
+            padding: 10px 0;
+            justify-content: center;
+        }
+        .plandetail-add {}
+        .plandetail-logo p {
+            padding: 2px 10px;
+        }
+        .plandetail-add {
+            padding: 0;
+        }
+        .plandetail-logo {
+            padding: 10px 0;
+        }
+        .plandetail-btn {
+            padding: 10px 0 0 0;
+        }
+        .plandetail-btn a {
+            padding: 7px 15px;
+        }
+        .fair-comment {
+            padding: 50px 0;
+        }
+        .plan-box {
+            padding: 0 20px 30px 20px;
+        }
+        /* チャペル */
+        .chapel-flex .cmt,
+        .chapel-flex2 .cmt {
+            width: 90%;
+        }
+        .chapel-flex .cmt span,
+        .chapel-flex2 .cmt span {}
+        .photogarary {
+            padding: 50px 0;
+        }
+        .chapel-flex {
+            padding: 0px 0 30px 0;
+        }
+        .chapel-flex2 {
+            padding: 0;
+            gap: 0;
+        }
+        .access-cmt {}
+        /* 披露宴会場 */
+        .party-comment h3 {}
+        .bet {}
+        .party {
+            padding: 0;
+        }
+        .cusine-text h3 {}
+        .cusine-text h4 {
+            padding: 10px 0;
+        }
+        .some {}
+        .chef-content h3 {}
+        .chefname {}
+        .chef-comment {}
+        .cake-text {
+            margin: 0 20px;
+        }
+        .cake-flex {
+            width: 90%;
+        }
+    }
+}
